@@ -1,0 +1,14 @@
+<h1>Your score</h1>
+
+
+<% if @included %>
+  <% if @english_word %>
+    <p>Congratulations! <%= @word %> is a valid word</p>
+  <% else %>
+    <p>Sorry, <%= @word %> is not a valid english word...</p>
+  <% end %>
+<% else %>
+    <p>Sorry,<%= @word %> is an english word but can't be built out of those letters</p>
+<% end %>
+
+<%= link_to("Try again!", new_path) %>
